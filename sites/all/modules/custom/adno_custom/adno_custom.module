@@ -1,0 +1,77 @@
+<?php
+// The path that will contain the uploaded background images.
+define('ADNO_CUSTOM_BACKGROUND_IMAGE_FOLDER', 'public://background_images/');
+// The maximum file size for uploaded background images in MB.
+define('ADNO_CUSTOM_BACKGROUND_IMAGE_MAX_FILE_SIZE', '2');
+
+/**
+ * Implements hook_permission().
+ */
+function adno_custom_permission() {
+  return array(
+    'administer adno settings' => array(
+      'title' => t('Administer adno settings'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function adno_custom_menu() {
+  $items['admin/config/adno_custom'] = array(
+    'title' => 'Adno',
+    'access arguments' => array('administer adno settings'),
+    'weight' => -100,
+  );
+
+  $items['admin/config/adno_custom/backgrounds'] = array(
+    'title' => 'Background images',
+    'description' => 'Adjust page background images.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('adno_backgrounds_form'),
+    'access arguments' => array('administer adno settings'),
+    'file' => 'adno_custom.admin.inc',
+  );
+
+  $items['admin/config/adno_custom/doormat'] = array(
+    'title' => 'Doormat',
+    'description' => 'Adjust adno doormat.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('adno_custom_settings'),
+    'access arguments' => array('administer adno settings'),
+    'file' => 'adno_custom.admin.inc',
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_language_switch_alter().
+ *
+ * Alters language switcher links, pointing them to the homepage if there's no
+ * translation for the current page.
+ */
+function adno_custom_language_switch_links_alter(&$links, $type, $path) {
+  $language_type = variable_get('translation_language_type', LANGUAGE_TYPE_INTERFACE);
+  if ($type == $language_type) {
+    foreach ($links as $langcode => &$link) {
+      if (!isset($link['href'])) {
+        $link['href'] = '<front>';
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function adno_custom_theme() {
+  return array(
+    'adno_custom_image_formatter' => array(
+      'variables' => array('item' => NULL, 'image_style' => NULL, 'path' => NULL),
+    ),
+    'adno_custom_text_formatter' => array(
+      'variables' => array('item' => NULL, 'wrapper' => NULL),
+    ),
+  );
+}

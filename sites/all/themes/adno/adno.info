@@ -1,0 +1,29 @@
+name = Adno
+description = Theme for the Adno website
+package = Core
+version = VERSION
+core = 7.x
+
+regions[header] = Header
+regions[nav] = Nav
+regions[slideshow] = Slideshow
+regions[content] = Content
+regions[sidebar_right] = Sidebar right
+regions[doormat] = Doormat
+regions[footer] = Footer
+; New standard D7 regions
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+
+features[] = logo
+features[] = name
+features[] = favicon
+features[] = slogan
+features[] = main_menu
+
+stylesheets[all][] = css/skin.css
+stylesheets[all][] = css/main.css
+stylesheets[all][] = css/features.css
+
+scripts[] = js/jquery.jcarousel.min.js
+scripts[] = js/adno.js

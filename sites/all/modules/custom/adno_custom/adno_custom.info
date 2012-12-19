@@ -1,0 +1,4 @@
+name = Adno custom
+description = Provides adjustable background images functionalities
+core = 7.x
+package = Adno
