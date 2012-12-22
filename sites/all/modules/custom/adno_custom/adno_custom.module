@@ -65,7 +65,7 @@ function adno_custom_image_page($adno_image) {
     $meta_header = array(
       'url' => $current_url,
       'image' => file_create_url($adno_image->uri),
-      'title' => 'test',
+      'title' => 'Adno = Exclusive Truck Interiors',
     );
 
     // Add the meta headers.
