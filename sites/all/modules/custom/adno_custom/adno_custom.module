@@ -42,8 +42,94 @@ function adno_custom_menu() {
     'access arguments' => array('administer adno settings'),
     'file' => 'adno_custom.admin.inc',
   );
+
+   $items['image/%adno_image'] = array(
+    'page callback' => 'adno_custom_image_page',
+    'page arguments' => array(1),
+    'access arguments' => array('access content'),
+  );
   return $items;
 }
+
+function adno_custom_image_page($adno_image) {
+  global $base_url;
+  $current_url = $base_url . '/' . (isset($_GET['q']) ? $_GET['q'] : '');
+    // It's a colorbox call. Renders only the image and addthis.
+    if (isset($_GET['internal'])) {
+      print theme('adno_image_colorbox', array('image_url' => $adno_image->uri, 'page_url' => $current_url));
+      // Prevents the theming of the whole page.
+      exit();
+    }
+
+    // Create an array for the meta headers we need to add.
+    $meta_header = array(
+      'url' => $current_url,
+      'image' => file_create_url($adno_image->uri),
+      'title' => 'test',
+    );
+
+    // Add the meta headers.
+    adno_custom_print_og_meta($meta_header);
+
+    $content = theme('adno_image_full',
+      array(
+        'image_url' => $adno_image->uri,
+      )
+    );
+  return $content;
+}
+
+function adno_image_load($fid) {
+  return file_load($fid);
+}
+
+/**
+ * Add the og meta data.
+ *
+ * @param $vars
+ * 	array of meta data
+ */
+function adno_custom_print_og_meta($vars) {
+  foreach ($vars as $property => $content) {
+    drupal_add_html_head(
+      array(
+        '#tag' => 'meta',
+        '#attributes' => array(
+          'property' => 'og:' . $property,
+          'content' => check_plain($content),
+        ),
+      ),
+      'adno_og_' . $property
+    );
+  }
+}
+
+/**
+ * Theming function for the content in the colorbox.
+ */
+function theme_adno_image_colorbox($vars) {
+   //Fetch css features file.
+  $output = '<head>';
+ // $output .= '<link style="text/css" rel="stylesheet" href="/' . drupal_get_path('theme', 'combell') . '/css/reset.css" />';
+  //$output .= '<link style="text/css" rel="stylesheet" href="/' . drupal_get_path('theme', 'combell') . '/css/features.css" />';
+  //$output .= '<script type="text/javascript" src="/' . drupal_get_path('theme', 'combell') . '/js/addthis.js"></script>';
+  $output .= '</head>';
+  $output .= '<body>';
+  $output .=  '<img class="colorbox-content-image" src="' . file_create_url($vars['image_url']) . '" />';
+  $output .= theme('adno_addthis', array('page_url' => $vars['page_url']));
+   $output .= '</body>';
+  return $output;
+}
+
+/**
+ * Theming function for the full content for the image node.
+ */
+function theme_adno_image_full($vars) {
+  $output = '';
+  $output .= '<img src="' . file_create_url($vars['image_url']) . '" />';
+  return $output;
+}
+
 
 /**
  * Implements hook_language_switch_alter().
@@ -72,6 +158,20 @@ function adno_custom_theme() {
     ),
     'adno_custom_text_formatter' => array(
       'variables' => array('item' => NULL, 'wrapper' => NULL),
+    ),
+    'adno_image_colorbox' => array(
+      'variables' => array('image_url' => NULL, 'page_url' => NULL),
+    ),
+    'adno_addthis' => array(
+      'template' => 'tpl/addthis',
+      'variables' => array(
+        'page_url' => NULL,
+      ),
+    ),
+    'adno_image_full' => array(
+      'variables' => array(
+        'image_url' => NULL,
+      ),
     ),
   );
 }
