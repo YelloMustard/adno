@@ -5,14 +5,23 @@
 @font-face {
   font-family: 'Open Sans Condensed';
   font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Condensed Bold'), local('OpenSans-CondensedBold'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v6/gk5FxslNkTTHtojXrkp-xONSK5BxN3NFS4EJkViHIqo.woff) format('woff');
+  font-weight: normal;
+  src: url('../fonts/OpenSans-CondLight-webfont.eot');
+  src: url('../fonts/OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/OpenSans-CondLight-webfont.woff') format('woff'),
+       url('../fonts/OpenSans-CondLight-webfont.ttf') format('truetype'),
+       url('../fonts/OpenSans-CondLight-webfont.svg#OpenSansCondensedLight') format('svg');
 }
+
 @font-face {
   font-family: 'Open Sans Condensed';
   font-style: normal;
-  font-weight: 300;
-  src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v6/gk5FxslNkTTHtojXrkp-xF1YPouZEKgzpqZW9wN-3Ek.woff) format('woff');
+  font-weight: bold;
+  src: url('../fonts/OpenSans-CondBold-webfont.eot');
+  src: url('../fonts/OpenSans-CondBold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/OpenSans-CondBold-webfont.woff') format('woff'),
+       url('../fonts/OpenSans-CondBold-webfont.ttf') format('truetype'),
+       url('../fonts/OpenSans-CondBold-webfont.svg#OpenSansCondensedBold') format('svg');
 }
 
 /**
@@ -33,7 +42,7 @@ html {
 
 body {
   color: #ffffff;
-  font: 18px/20px 'Open Sans Condensed', sans-serif;
+  font: 18px/20px 'Open Sans Condensed', Arial, sans-serif;
 }
 
 a {
@@ -52,41 +61,37 @@ p {
 
 h1 {
   color: #ffffff;
-  font: bold 24px/30px 'Open Sans Condensed', sans-serif;
-  padding: 0 0 0 10px;
-  text-transform: uppercase;
+  font-size: 24px;
 }
 
 h2 {
   color: #ffffff;
-  font: bold 24px/30px 'Open Sans Condensed', sans-serif;
+  font-size: 24px;
   padding: 0;
-  text-transform: uppercase;
 }
 
 h3 {
   color: #0081ff;
-  font: bold 18px/30px 'Open Sans Condensed', sans-serif;
-  padding: 0 0 0 10px;
-  text-transform: uppercase;
+  font-size: 18px;
 }
 
 h4 {
   color: #0081ff;
-  font: bold 16px/30px 'Open Sans Condensed', sans-serif;
-  padding: 0 0 0 10px;
-  text-transform: uppercase;
+  font-size: 16px;
 }
 
 h5 {
   color: #0081ff;
-  font: bold 14px/30px 'Open Sans Condensed', sans-serif;
-  padding: 0 0 0 10px;
-  text-transform: uppercase;
+  font-size: 14px;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  margin-bottom: .5em;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans Condensed', Arial, sans-serif;
+  font-weight: bold;
+  line-height: 30px;
+  margin-bottom: 0.5em;
+  padding: 0 0 0 10px;
+  text-transform: uppercase;
 }
 
 ul {
@@ -105,7 +110,7 @@ ol {
 
 blockquote {
   color: #c9034d;
-  font: italic 12px/18px Helvetica, Arial, sans-serif;
+  font: italic 12px/18px;
   margin: 1em 0 1em 0;
   padding: 0 12px;
 }
@@ -174,12 +179,10 @@ blockquote {
   background: none;
   padding: 0;
 }
-.front #navigation ul li a {
-  padding-bottom: 20px;
-}
 .field-name-body {
   padding: 20px 0 0 0;
 }
+
 /**
  * Header.
  */
@@ -200,7 +203,7 @@ blockquote {
 #navigation ul {
   padding: 0;
   margin: 0;
-  font: 18px/30px 'Open Sans Condensed', sans-serif;
+  font: 18px/30px;
   text-align: right;
 }
 
@@ -222,6 +225,7 @@ blockquote {
   border-radius: 7px;
   color: #ffffff;
   display: inline-block;
+  line-height: 33px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -296,6 +300,7 @@ blockquote {
   text-decoration: none;
   text-transform: uppercase;
 }
+
 /**
  * Footer.
  */
@@ -304,7 +309,7 @@ blockquote {
   height: 32px;
   margin: 25px 0 0 0;
   padding: 10px 0 0 0;
-  text-align: center; 
+  text-align: center;
 }
 #footer-wrapper ul {
   font-size: 16px;

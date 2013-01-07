@@ -1,7 +1,7 @@
 .jcarousel-skin-tango .jcarousel-container {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-   border-radius: 10px;
+    border-radius: 10px;
     background: #F0F6F9;
     border: 1px solid #346F97;
 }
@@ -111,7 +111,7 @@
     background-image: url(next-horizontal.png);
 }
 
-.jcarousel-skin-tango .jcarousel-prev-horizontal:hover, 
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover,
 .jcarousel-skin-tango .jcarousel-prev-horizontal:focus {
     background-position: -32px 0;
 }

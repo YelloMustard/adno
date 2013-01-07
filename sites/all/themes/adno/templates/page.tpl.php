@@ -20,7 +20,6 @@
       <div id="content" <?php if (isset($page['sidebar_right']) && $page['sidebar_right']) {
           print 'class="right-sidebar-enabled"';
         }?>>
-        <div id="content_top"></div>
         <div id="inner_content">
           <?php print render($title_prefix); ?>
           <?php if ($title): ?>
@@ -56,7 +55,6 @@
               <?php print render($page['content']); ?>
            </div>
         </div>
-        <div id="content_footer"></div>
       </div>
       <?php if (isset($page['sidebar_right']) && $page['sidebar_right']): ?>
         <div id="sidebar-right" class="sidebar">
