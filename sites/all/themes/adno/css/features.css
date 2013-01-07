@@ -1,37 +1,3 @@
-#block-locale-language ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-#block-locale-language ul li {
-  display: inline-block;
-  float: left;
-  margin: 0 0 0 10px;
-}
-#block-locale-language ul li a {
-  display: inline-block;
-  height: 19px;
-  text-decoration: none;
-  text-indent: -9999px;
-  width: 29px;
-}
-#block-locale-language ul li .link-en {
-  background: url('../images/en.png') 0 0 no-repeat;
-  width: 29px;
-}
-#block-locale-language ul li .link-de {
-  background: url('../images/de.png') 0 0 no-repeat;
-  width: 28px;
-}
-#block-locale-language ul li .link-fr {
-  background: url('../images/fr.png') 0 0 no-repeat;
-  width: 28px;
-}
-#block-locale-language ul li .link-nl {
-  background: url('../images/nl.png') 0 0 no-repeat;
-  width: 26px;
-}
-
 /**
  * Homepage slideshow.
  */

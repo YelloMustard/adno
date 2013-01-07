@@ -1,4 +1,5 @@
 <?php
+
 /**
 * Implements template_preprocess_page().
 *
@@ -20,11 +21,14 @@ function adno_preprocess_page(&$vars) {
   }
 }
 
+/**
+ * Add specific classes to language links.
+ */
 function adno_links__locale_block(&$vars) {
-  $output = '<ul>';
-  $output .= '<li>' . t('Choose your language:') . '</li>';
+  $output = '<ul class="menu">';
+  $output .= '<li class="leaf">' . t('Choose your language:') . '</li>';
   foreach ($vars['links'] as $language => $link) {
-    $output .= '<li>' . l($language, isset($link['href']) ? $link['href'] : '<front>', array(
+    $output .= '<li class="leaf">' . l($language, isset($link['href']) ? $link['href'] : '<front>', array(
       'attributes' => array(
         'class' => array('link-' . $language)
       ),

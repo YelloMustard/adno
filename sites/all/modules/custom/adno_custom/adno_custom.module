@@ -58,7 +58,7 @@ function adno_custom_image_page($adno_image) {
     if (isset($_GET['internal'])) {
       print theme('adno_image_colorbox', array('image_url' => $adno_image->uri, 'page_url' => $current_url));
       // Prevents the theming of the whole page.
-      exit();
+      drupal_exit();
     }
 
     // Create an array for the meta headers we need to add.
@@ -110,7 +110,7 @@ function adno_custom_print_og_meta($vars) {
 function theme_adno_image_colorbox($vars) {
    //Fetch css features file.
   $output = '<head>';
- // $output .= '<link style="text/css" rel="stylesheet" href="/' . drupal_get_path('theme', 'combell') . '/css/reset.css" />';
+  // $output .= '<link style="text/css" rel="stylesheet" href="/' . drupal_get_path('theme', 'combell') . '/css/reset.css" />';
   //$output .= '<link style="text/css" rel="stylesheet" href="/' . drupal_get_path('theme', 'combell') . '/css/features.css" />';
   //$output .= '<script type="text/javascript" src="/' . drupal_get_path('theme', 'combell') . '/js/addthis.js"></script>';
   $output .= '</head>';

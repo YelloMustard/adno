@@ -1,18 +1,16 @@
 <div id="body-wrapper">
   <div id="page-wrapper">
-    <div id="header-wrapper">
-      <div id="header">
-        <?php if ($logo): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Return to the homepage'); ?>" rel="home" id="logo">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-          </a>
-        <?php endif; ?>
+    <div id="header">
+      <?php if ($logo): ?>
+        <a href="<?php print $front_page; ?>" title="<?php print t('Return to the homepage'); ?>" rel="home" id="logo">
+          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+        </a>
+      <?php endif; ?>
 
-        <?php print render($page['header']); ?>
+      <?php print render($page['header']); ?>
 
-        <div id="navigation">
-            <?php print render($page['nav']); ?>
-        </div>
+      <div id="navigation">
+          <?php print render($page['nav']); ?>
       </div>
     </div>
 
@@ -63,24 +61,16 @@
       <?php endif; ?>
     </div>
 
-    <div id="doormat-footer-wrapper">
-      <div id="doormat-footer">
-        <div id="doormat-wrapper">
-          <?php if ($page['doormat']): ?>
-            <div id="doormat"><?php print render($page['doormat']); ?></div>
-          <?php endif; ?>
-        </div>
+    <?php if ($page['doormat']): ?>
+      <div id="doormat"><?php print render($page['doormat']); ?></div>
+    <?php endif; ?>
 
-        <div id="footer-wrapper">
-          <?php if ($page['footer']): ?>
-            <div id="footer"><?php print render($page['footer']); ?></div>
-          <?php endif; ?>
-        </div>
-      </div>
-    </div>
+    <?php if ($page['footer']): ?>
+      <div id="footer"><?php print render($page['footer']); ?></div>
+    <?php endif; ?>
+
   </div>
 </div>
-<div id="page-footer"></div>
 <div id="background">
   <?php print $background_image; ?>
 </div>
