@@ -58,29 +58,26 @@
 .view-carousels ul {
   list-style-type: none;
 }
-.view-carousels li {
-  height: 258px;
-  width: 222px;
-}
 .view-carousels .item-list ul li {
-  margin: 0 5px;
+  margin: 0 12px 0 0;
+  width: 221px;
 }
 .view-carousels .carousel-image {
-  height: 223px;
+  height: 221px;
   overflow: hidden;
   position: relative;
-  width: 222px;
+  width: 221px;
 }
-.view-carousels .carousel-image .carousel-image-normal,
-.view-carousels .carousel-image .carousel-image-hover {
+.view-carousels .carousel-image-normal,
+.view-carousels .carousel-image-hover {
   left: 0;
   position: absolute;
   top: 0;
 }
-.view-carousels .carousel-image .carousel-image-normal {
+.view-carousels .carousel-image-normal {
   z-index: 100;
 }
-.view-carousels .carousel-image .carousel-image-hover {
+.view-carousels .carousel-image-hover {
   z-index: 99;
 }
 .view-carousels li:hover .carousel-image-hover {
@@ -89,39 +86,37 @@
 .view-carousels .carousel-footer a {
   background: #1d1d1d;
   display: block;
-  height: 29px;
   font-size: 16px;
   font-weight: bold;
-  padding: 5px 0 0 0;
+  line-height: 32px;
+  padding: 1px 0 0 0;
   text-align: center;
   text-decoration: none;
-  width: 222px;
+  text-transform: uppercase;
 }
 .view-carousels .carousel-footer a:hover {
   color: #ffffff;
 }
 .view-carousels .jcarousel-clip {
   overflow: hidden;
-  padding: 12px 10px 12px 5px;
+  padding: 10px;
   width: 920px;
+}
+.view-carousels .jcarousel-next-horizontal,
+.view-carousels .jcarousel-prev-horizontal {
+  cursor: pointer;
+  height: 46px;
+  position: absolute;
+  top: 114px;
+  width: 44px;
 }
 .view-carousels .jcarousel-next-horizontal {
   background: url('../images/btn_nextprev.png') -44px 0 no-repeat;
-  cursor: pointer;
-  height: 46px;
-  position: absolute;
   right: -47px;
-  top: 110px;
-  width: 44px;
 }
 .view-carousels .jcarousel-prev-horizontal {
   background: url('../images/btn_nextprev.png') -44px -44px no-repeat;
-  cursor: pointer;
-  height: 46px;
   left: -47px;
-  position: absolute;
-  top: 110px;
-  width: 44px;
 }
 .view-carousels .jcarousel-next-horizontal:hover {
   background-position: 0 0;
@@ -139,13 +134,15 @@
  */
 .gallery-wrapper {
   overflow: hidden;
-  width: 930px;
 }
 .gallery-wrapper .views-row {
   display: block;
   float: left;
   margin: 0 12px 12px 0;
   width: 221px;
+}
+.gallery-wrapper .views-row:nth-child(4) {
+  margin-right: 0;
 }
 .gallery-wrapper a,
 .gallery-wrapper img {

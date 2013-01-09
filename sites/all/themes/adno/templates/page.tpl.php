@@ -8,10 +8,7 @@
       <?php endif; ?>
 
       <?php print render($page['header']); ?>
-
-      <div id="navigation">
-          <?php print render($page['nav']); ?>
-      </div>
+      <?php print render($page['nav']); ?>
     </div>
 
     <div id="content-wrapper">
@@ -39,11 +36,9 @@
           <ul class="action-links"><?php print render($action_links); ?></ul>
         <?php endif; ?>
 
-        <div class="content-inner">
-          <?php print render($page['content']); ?>
-        </div>
-
+        <?php print render($page['content']); ?>
       </div>
+
       <?php if (isset($page['sidebar_right']) && $page['sidebar_right']): ?>
         <div id="sidebar-right" class="sidebar">
           <?php print render($page['sidebar_right']); ?>
@@ -58,7 +53,6 @@
     <?php if ($page['footer']): ?>
       <div id="footer"><?php print render($page['footer']); ?></div>
     <?php endif; ?>
-
   </div>
 </div>
 <div id="background">

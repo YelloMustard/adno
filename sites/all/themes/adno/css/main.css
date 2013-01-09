@@ -272,17 +272,17 @@ label {
 /**
  * Navigation.
  */
-#navigation {
+.region-nav {
   clear: both;
   float: right;
   margin-top: -14px;
 }
 
-#navigation .menu {
+.region-nav .menu {
   margin: 0;
 }
 
-#navigation .menu .leaf {
+.region-nav .menu .leaf {
   display: inline-block;
   list-style-image: none;
   list-style: none;
@@ -290,7 +290,7 @@ label {
   padding: 0;
 }
 
-#navigation .menu .leaf a {
+.region-nav .menu .leaf a {
   background: #464444;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -306,12 +306,12 @@ label {
   text-decoration: none;
   text-transform: uppercase;
 }
-#navigation .menu .leaf a:hover,
-#navigation .menu .active a {
+.region-nav .menu .leaf a:hover,
+.region-nav .menu .active a {
   font-weight: bold;
 }
 
-.front #navigation .menu .leaf a {
+.front .region-nav .menu .leaf a {
   -webkit-border-radius: 7px 7px 0 0;
   -moz-border-radius: 7px 7px 0 0;
   border-radius: 7px 7px 0 0;
@@ -331,12 +331,11 @@ label {
   padding: 0;
 }
 
-.content-inner {
+.region-content {
   background: #3c3c3c;
   padding: 0 10px;
-  overflow: hidden;
 }
-.front .content-inner {
+.front .region-content {
   background: none;
   padding: 0;
 }
@@ -439,6 +438,10 @@ label {
 /**
  * Development.
  */
+div.messages {
+  margin: 3px 0;
+}
+
 .contextual-links-wrapper {
   font-family: Arial, sans-serif;
 }
