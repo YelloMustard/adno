@@ -144,28 +144,23 @@
 .gallery-wrapper .views-row {
   display: block;
   float: left;
-  height: 258px;
-  margin: 0 10px 18px 0;
-  width: 222px;
+  margin: 0 12px 12px 0;
+  width: 221px;
 }
-.gallery-wrapper .views-field-field-images {
-  height: 223px;
-  overflow: hidden;
+.gallery-wrapper a,
+.gallery-wrapper img {
+  display: block;
+  text-decoration: none;
 }
-.gallery-wrapper .views-field-title a {
+.gallery-wrapper a div {
   background: #1d1d1d;
   display: block;
-  height: 29px;
   font-size: 16px;
   font-weight: bold;
-  overflow: hidden;
-  padding: 5px 0 0 0;
+  line-height: 32px;
+  padding: 1px 0 0 0;
   text-align: center;
-  text-decoration: none;
-  width: 222px;
-}
-.gallery-wrapper .views-field-title a:hover {
-  color: #ffffff;
+  text-transform: uppercase;
 }
 
 /**
