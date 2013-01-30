@@ -8,13 +8,13 @@
   width: 940px;
 }
 .view-slideshow-blocks .slide .slide_content {
-	background: #464444;
-	color:#fff;
-	padding: 15px 30px;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 880px;
+  background: #464444;
+  color:#fff;
+  padding: 15px 30px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 880px;
 }
 .view-slideshow-blocks .slide .slide_content .slide-title {
   color: #fff;
@@ -137,7 +137,7 @@
  */
 .gallery-wrapper {
   overflow: hidden;
-	padding-top:12px;
+  padding-top:12px;
 }
 .gallery-wrapper .views-row {
   display: block;
@@ -165,7 +165,7 @@
 }
 
 .gallery-wrapper .pager a{
-	text-decoration:none;
+  text-decoration:none;
 }
 
 /**
@@ -234,7 +234,7 @@
 }
 
 .view-events{
-	padding-top:12px;
+  padding-top:12px;
 }
 .events-page .views-row {
   border-bottom: 1px solid #383838;
@@ -260,54 +260,54 @@
     background: #0081FF;
 }
 .calendar-calendar .month-view .full td.single-day div.monthview, .calendar-calendar .week-view .full td.single-day div.weekview, .calendar-calendar .day-view .full td.single-day div.dayview {
-	background:#3C3C3C;
+  background:#3C3C3C;
 }
 
 #block-views-events-extra-info{
-	float:right;
-	background:#1D1D1D;
+  float:right;
+  background:#1D1D1D;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
-	padding:10px 25px;
-	margin:25px 10px;
+  padding:10px 25px;
+  margin:25px 10px;
 }
 
 .node-events .field-name-field-event-image {
-	float:left;
-	padding-right:12px;
+  float:left;
+  padding-right:12px;
 }
 
 #block-views-events-extra-info .views-field{
-	padding-bottom:12px;
+  padding-bottom:12px;
 }
 
 .view .date-nav-wrapper .date-heading{
-text-align: left;  
+text-align: left;
 }
 
 .view .date-nav{
-	padding-bottom:5px;
+  padding-bottom:5px;
 }
 
 /**
  * Contact
  */
 #googlemaps{
-	float:right;
-	padding-right: 20px;
+  float:right;
+  padding-right: 20px;
 }
 #googlemaps a{
-	color:#fff;
+  color:#fff;
 }
 
 .webform-client-form textarea{
-	width:447px; 
+  width:447px;
 }
 
 .webform-client-form input.form-text,
 .webform-client-form select{
-	height:auto;
+  height:auto;
 }
 
 #webform-component--verplicht-in-te-vullen{
@@ -319,11 +319,11 @@ text-align: left;
  */
 
 #footer .addthis_toolbox{
-	float:right;
-	margin-top:-20px;
+  float:right;
+  margin-top:-20px;
 }
 
 #titlebox .addthis_toolbox{
-	float:right;
-	margin-top:-39px;
+  float:right;
+  margin-top:-39px;
 }

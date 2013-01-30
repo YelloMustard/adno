@@ -12,7 +12,7 @@
     </div>
 
     <div id="content-wrapper">
-      
+
       <div id="content" <?php if (isset($page['sidebar_right']) && $page['sidebar_right']) {
           print 'class="right-sidebar-enabled"';
         }?>>
@@ -54,9 +54,8 @@
               <?php print render($page['submenu']); ?>
             </div>
           <?php endif; ?>
-          
+
           <?php print render($page['content']); ?>
-          <div class="clearfix">&nbsp;</div>
         </div>
       </div>
 
