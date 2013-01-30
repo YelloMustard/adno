@@ -38,3 +38,10 @@ function adno_links__locale_block(&$vars) {
   $output .= '</ul>';
   return $output;
 }
+
+
+function adno_preprocess_html(&$vars) {
+  if (!empty($vars['page']['submenu'])) { 
+    $vars['classes_array'][] = 'submenu'; 
+  } 
+}
