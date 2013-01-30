@@ -55,7 +55,9 @@
             </div>
           <?php endif; ?>
 
-          <?php print render($page['content']); ?>
+          <div class="clearfix">
+            <?php print render($page['content']); ?>
+          </div>
         </div>
       </div>
 

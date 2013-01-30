@@ -365,7 +365,6 @@ body.front #submenu-and-content{
 }
 .region-content {
   padding: 0 10px;
-  overflow: hidden;
 }
 body.submenu .region-content{
   float:left;
